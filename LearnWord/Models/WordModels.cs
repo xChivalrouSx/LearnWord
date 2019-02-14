@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace LearnWord.Models
+{
+    public class WordModels
+    {
+        [Required]
+        [Key, Column(Order = 2)]
+        public ApplicationUser User { get; set; }
+
+        [Required]
+        [Key, Column(Order = 2)]
+        public string Word { get; set; }
+
+        public List<string> Sentences { get; set; }
+
+        public List<string> Synonyms { get; set; }
+
+        public string Category { get; set; }
+
+        public string Meaning { get; set; }
+    }
+}
