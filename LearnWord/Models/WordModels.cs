@@ -9,12 +9,13 @@ namespace LearnWord.Models
 {
     public class WordModels
     {
+        [Key]
+        public int id { get; set; }
+
         [Required]
-        [Key, Column(Order = 2)]
         public ApplicationUser User { get; set; }
 
         [Required]
-        [Key, Column(Order = 2)]
         public string Word { get; set; }
 
         public List<string> Sentences { get; set; }
