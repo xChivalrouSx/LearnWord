@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnWord", "LearnWord\LearnWord.csproj", "{DB91FD48-A03B-496C-A1C7-DCC1AC37AC83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnWord.Tests", "LearnWord.Tests\LearnWord.Tests.csproj", "{E914E284-EB93-41BB-81B2-2E087C996074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB91FD48-A03B-496C-A1C7-DCC1AC37AC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB91FD48-A03B-496C-A1C7-DCC1AC37AC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB91FD48-A03B-496C-A1C7-DCC1AC37AC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB91FD48-A03B-496C-A1C7-DCC1AC37AC83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E914E284-EB93-41BB-81B2-2E087C996074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E914E284-EB93-41BB-81B2-2E087C996074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E914E284-EB93-41BB-81B2-2E087C996074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E914E284-EB93-41BB-81B2-2E087C996074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FFFAB9A-43B6-47F5-83FE-C80AD5933E12}
+	EndGlobalSection
+EndGlobal
