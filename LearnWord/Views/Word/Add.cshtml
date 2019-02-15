@@ -1,0 +1,15 @@
+﻿@model LearnWord.Models.WordModels
+
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Word)
+        @Html.TextBoxFor(m => m.Word, new { @class = "form-control" })
+    </div>
+</form>

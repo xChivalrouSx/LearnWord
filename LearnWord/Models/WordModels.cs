@@ -20,7 +20,15 @@ namespace LearnWord.Models
 
         public List<string> Sentences { get; set; }
 
+        [Required]
+        public int SentencesNumber { get; set; }
+        // Default value 0
+
         public List<string> Synonyms { get; set; }
+
+        [Required]
+        public int SynonymsNumber { get; set; }
+        // Default value 0
 
         public string Category { get; set; }
 

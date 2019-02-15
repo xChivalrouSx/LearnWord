@@ -9,7 +9,7 @@ namespace LearnWord.Controllers
     public class WordController : Controller
     {
         // GET: Word
-        public ActionResult Create()
+        public ActionResult Add()
         {
             return View();
         }
