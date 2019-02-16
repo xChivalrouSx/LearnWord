@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace LearnWord.Models
 {
@@ -20,15 +16,7 @@ namespace LearnWord.Models
 
         public List<string> Sentences { get; set; }
 
-        [Required]
-        public int SentencesNumber { get; set; }
-        // Default value 0
-
         public List<string> Synonyms { get; set; }
-
-        [Required]
-        public int SynonymsNumber { get; set; }
-        // Default value 0
 
         public string Category { get; set; }
 
