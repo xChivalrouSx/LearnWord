@@ -196,6 +196,14 @@
     <Compile Include="Migrations\201902160005256_CorrectionOnWordModelTable.Designer.cs">
       <DependentUpon>201902160005256_CorrectionOnWordModelTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902170003177_UpdateOnWordModel.cs" />
+    <Compile Include="Migrations\201902170003177_UpdateOnWordModel.Designer.cs">
+      <DependentUpon>201902170003177_UpdateOnWordModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902170034318_UpdateUserIdOnWordModel.cs" />
+    <Compile Include="Migrations\201902170034318_UpdateUserIdOnWordModel.Designer.cs">
+      <DependentUpon>201902170034318_UpdateUserIdOnWordModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -262,6 +270,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Word\Add.cshtml" />
+    <Content Include="Views\Word\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902160005256_CorrectionOnWordModelTable.resx">
       <DependentUpon>201902160005256_CorrectionOnWordModelTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902170003177_UpdateOnWordModel.resx">
+      <DependentUpon>201902170003177_UpdateOnWordModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902170034318_UpdateUserIdOnWordModel.resx">
+      <DependentUpon>201902170034318_UpdateUserIdOnWordModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

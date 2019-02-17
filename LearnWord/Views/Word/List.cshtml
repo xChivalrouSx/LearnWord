@@ -1,0 +1,30 @@
+﻿@model IEnumerable<LearnWord.Models.WordModels>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Word List</h2>
+
+@using (Html.BeginForm("List", "Word")) {
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Word</th>
+            <th scope="col">Meaning</th>
+        </thead>
+        <tbody>
+            @{int i = 0;}
+            @foreach(var item in Model)
+            {
+                i++;
+                <tr>
+                    <th scope="row">@i</th>
+                    <td>@item.Word</td>
+                    <td>@item.Meaning</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

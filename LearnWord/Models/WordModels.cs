@@ -9,14 +9,14 @@ namespace LearnWord.Models
         public int id { get; set; }
 
         [Required]
-        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
 
         [Required]
         public string Word { get; set; }
 
-        public List<string> Sentences { get; set; }
+        public string Sentences { get; set; }
 
-        public List<string> Synonyms { get; set; }
+        public string Synonyms { get; set; }
 
         public string Category { get; set; }
 
