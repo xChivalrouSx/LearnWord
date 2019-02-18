@@ -17,6 +17,8 @@ namespace LearnWord.Controllers
             _context = new ApplicationDbContext();
         }
 
+        #region [ - HttpGet Methods - ]
+
         [Authorize]
         public ActionResult Add()
         {
@@ -24,9 +26,32 @@ namespace LearnWord.Controllers
         }
 
         [Authorize]
+        public ActionResult List()
+        {
+            string userId = User.Identity.GetUserId();
+            var model = _context.Words
+                .Where(w => w.UserId.Equals(userId)).ToList();
+
+            return View(model);
+        }
+
+        [Authorize]
+        public ActionResult Edit(int id)
+        {
+            var model = _context.Words.Find(id);
+
+            return View(model);
+        }
+
+        #endregion
+
+
+        #region [ - HttpPost Methods - ]
+
+        [Authorize]
         [HttpPost]
         public ActionResult Add(WordModels model)
-        {
+        {   // Improvement necessary
             model.UserId = User.Identity.GetUserId();
             ModelState["UserId"].Errors.Clear();
 
@@ -42,13 +67,24 @@ namespace LearnWord.Controllers
         }
 
         [Authorize]
-        public ActionResult List()
-        {
-            string userId = User.Identity.GetUserId();
-            var model = _context.Words
-                .Where(w => w.UserId.Equals(userId)).ToList();
+        [HttpPost]
+        public ActionResult Edit(WordModels model)
+        {   // Improvement necessary
+            model.UserId = User.Identity.GetUserId();
+            ModelState["UserId"].Errors.Clear();
+
+            if (ModelState.IsValid)
+            {
+                _context.Entry(model).State = EntityState.Modified;
+                _context.SaveChanges();
+
+                return RedirectToAction("List");
+            }
 
             return View(model);
         }
+
+        #endregion
+
     }
 }

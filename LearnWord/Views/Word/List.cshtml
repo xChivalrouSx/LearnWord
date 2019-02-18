@@ -6,25 +6,41 @@
 
 <h2>Word List</h2>
 
-@using (Html.BeginForm("List", "Word")) {
-    <table class="table table-striped">
-        <thead>
-            <th scope="col">#</th>
-            <th scope="col">Word</th>
-            <th scope="col">Meaning</th>
-        </thead>
-        <tbody>
-            @{int i = 0;}
-            @foreach(var item in Model)
-            {
-                i++;
-                <tr>
-                    <th scope="row">@i</th>
-                    <td>@item.Word</td>
-                    <td>@item.Meaning</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <th scope="col" class="col-mid-1">#</th>
+        <th scope="col" class="col-mid-3">Word</th>
+        <th scope="col" class="col-mid-4">Meaning</th>
+        <th scope="col" class="text-center col-md-1">Synonyms</th>
+        <th scope="col" class="text-center col-md-1">Sentences</th>
+        <th scope="col" class="text-center col-md-2"></th>
+        <th scope="col" class="text-center col-md-2"></th>
+
+    </thead>
+    <tbody>
+        @{ int i = 0; }
+        @foreach(var item in Model)
+        {
+            i++;
+
+            string synonyms = (item.Synonyms == null || item.Synonyms.Equals("")) ? "-" : "+";
+            string sentences = (item.Sentences == null || item.Sentences.Equals("")) ? "-" : "+";
+
+            <tr>
+                <th scope="row">@i</th>
+                <td>@item.Word</td>
+                <td>@item.Meaning</td>
+                <td class="text-center">@synonyms</td>
+                <td class="text-center">@sentences</td>
+                <td class="text-center">
+                    @Html.ActionLink("Details", "Edit", new { id=item.id })
+                </td>
+                <td class="text-center">
+                    @Html.ActionLink("Remove", "Remove", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 

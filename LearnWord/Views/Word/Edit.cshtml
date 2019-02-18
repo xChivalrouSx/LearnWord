@@ -1,0 +1,28 @@
+﻿@model LearnWord.Models.WordModels
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Word Detail</h2>
+
+@using (Html.BeginForm("Edit", "Word"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Word)
+        @Html.EditorFor(m => m.Word, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Meaning)
+        @Html.EditorFor(m => m.Meaning, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Synonyms)
+        @Html.EditorFor(m => m.Synonyms, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sentences)
+        @Html.EditorFor(m => m.Sentences, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}

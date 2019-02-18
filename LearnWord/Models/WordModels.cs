@@ -14,8 +14,10 @@ namespace LearnWord.Models
         [Required]
         public string Word { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public string Sentences { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public string Synonyms { get; set; }
 
         public string Category { get; set; }
