@@ -17,6 +17,7 @@ namespace LearnWord.Controllers
             _context = new ApplicationDbContext();
         }
 
+
         #region [ - HttpGet Methods - ]
 
         [Authorize]
@@ -41,6 +42,16 @@ namespace LearnWord.Controllers
             var model = _context.Words.Find(id);
 
             return View(model);
+        }
+
+        [Authorize]
+        public ActionResult Remove(int id)
+        {
+            var model = _context.Words.Find(id);
+            _context.Words.Remove(model);
+            _context.SaveChanges();
+
+            return RedirectToAction("List");
         }
 
         #endregion
