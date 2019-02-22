@@ -10,11 +10,11 @@
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Word)
-        @Html.TextBoxFor(m => m.Word, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Word, new { @class = "form-control w-50" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Meaning)
-        @Html.TextBoxFor(m => m.Meaning, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Meaning, new { @class = "form-control w-50" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Synonyms)
@@ -24,6 +24,6 @@
         @Html.LabelFor(m => m.Sentences)
         @Html.TextAreaFor(m => m.Sentences, new { @class = "form-control" })
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary w-button">Save</button>
 }
 
